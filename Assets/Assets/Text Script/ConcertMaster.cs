@@ -50,21 +50,21 @@ public class ConcertMaster : MonoBehaviour
         }
     }
 
-    void SpawnInFrontOfCamera()
+   void SpawnInFrontOfCamera()
     {
         if (skyFireworkPrefab == null || playerCamera == null) return;
 
-        // 1. Get the direction the CAMERA is facing, but flatten it to the horizon
+        // 1. Get the direction the CAMERA is facing
         Vector3 forwardDir = playerCamera.forward;
         forwardDir.y = 0; 
         forwardDir.Normalize();
 
-        // 2. Spawn 300 units in front of where you are LOOKING
-        // Lowered height to 2 units so it stays in the city skyline
-        Vector3 spawnPos = playerCamera.position + (forwardDir * 100f) + (Vector3.up * 2f);
+        // 2. BRING IT CLOSER: Changed 100f to 15f 
+        // 3. LOWER IT: Changed 2f to 1.5f (at eye level)
+        Vector3 spawnPos = playerCamera.position + (forwardDir * 90f) + (Vector3.up * 1.5f);
         
-        // 3. Add random spread so they don't overlap
-        spawnPos += new Vector3(Random.Range(-40f, 40f), Random.Range(0f, 15f), Random.Range(-40f, 40f));
+        // 4. TIGHTEN SPREAD: Reduced from 40f to 5f so they stay in your view
+        spawnPos += new Vector3(Random.Range(-5f, 5f), Random.Range(0f, 3f), Random.Range(-5f, 5f));
 
         Instantiate(skyFireworkPrefab, spawnPos, Quaternion.identity);
     }
