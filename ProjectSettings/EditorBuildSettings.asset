@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: c77e9d077a8743143bdeb1eeaccb8f86
+  - enabled: 1
+    path: Assets/Scenes/Onboarding.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Main Concert.unity
+    guid: 51f2e6b86c243a345ac21732d1877bfb
+  - enabled: 1
+    path: Assets/Scenes/Game-beat saber.unity
+    guid: b568eb1aa2181e44e88b93b4fb55c377
+  - enabled: 1
+    path: Assets/Scenes/Offboarding.unity
+    guid: 8a2035bab9cb03e4081b916658e73f0b
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 1a738184a8c0d6a41b8a0d6c97fd136e, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 65dd15cee3c7f96498d3c695d39b3fc0, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 7900192dd96dc8540bd758bba1390661, type: 2}
+  m_UseUCBPForAssetBundles: 0
